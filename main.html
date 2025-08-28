@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- ✅ Good: Font Awesome 6.5 (has fa-x-twitter) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -749,7 +751,7 @@ button.send-btn {
 
   <!-- IMAGE SECTION -->
   <div class="hero-container">
-    <img src="./Reach.jpg" alt="Hero banner" class="hero-img" />
+    <img src="./Reach.jpg" alt="Hero banner" class="hero-img" loading="eager" fetchpriority="high" decoding="async" />
   </div>
   
 
@@ -812,7 +814,7 @@ button.send-btn {
   </section>
 
   <div class="bot-icon" onclick="toggleChat()">
-    <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+    <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan" loading="lazy" decoding="async">
 </div>
 
 <!-- Chat Window -->
@@ -1090,6 +1092,24 @@ button.send-btn {
       createStars();
       animateStars();
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+          if (img.classList.contains('hero-img') || img.closest('.logo')) {
+            img.setAttribute('loading', 'eager');
+            img.setAttribute('fetchpriority', 'high');
+          } else {
+            img.setAttribute('loading', 'lazy');
+          }
+        }
+        if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+      });
+      document.querySelectorAll('video').forEach(v => {
+        if (!v.hasAttribute('preload')) v.setAttribute('preload', 'metadata');
+      });
+    });
+  </script>
     
 </body>
 </html>

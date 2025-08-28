@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alphamarkex Portfolio</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- ✅ Good: Font Awesome 6.5 (has fa-x-twitter) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Add this in your <head> -->
 <link
@@ -1518,7 +1520,7 @@ button.send-btn {
     </div>
   
     <div class="hero-image">
-      <img src="./Alpha Frontv page.png" alt="Ad Campaign">
+      <img src="./Alpha Frontv page.png" alt="Ad Campaign" loading="eager" fetchpriority="high" decoding="async">
     </div>
   </section>
   
@@ -1672,7 +1674,7 @@ button.send-btn {
     <h2>Video Advertisement</h2>
     
 
-    <video controls>
+    <video controls preload="metadata">
       <source src="./WhatsApp Video 2025-08-17 at 13.40.43_327a743a.mp4" class="wide" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -1892,15 +1894,21 @@ button.send-btn {
   </script>
   
   <script>
-    document.getElementById('toggleDark').addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
-        document.body.style.backgroundColor = '#0e0e1a';
-        document.body.style.color = '#ffffff';
-      } else {
-        document.body.style.backgroundColor = '';
-        document.body.style.color = '';
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+          if (img.closest('.logo') || img.closest('.hero-image')) {
+            img.setAttribute('loading','eager');
+            img.setAttribute('fetchpriority','high');
+          } else {
+            img.setAttribute('loading','lazy');
+          }
+        }
+        if (!img.hasAttribute('decoding')) img.setAttribute('decoding','async');
+      });
+      document.querySelectorAll('video').forEach(v => {
+        if (!v.hasAttribute('preload')) v.setAttribute('preload','metadata');
+      });
     });
   </script>
 

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add this in your <head> -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="./Untitled_design__3_-removebg-preview-removebg-preview.png" />
+
+  <title>Alphamarkex - Our Design</title>
+  <style>
+    html, body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #f0f8fc;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f1f8fc; /* match the color in your image */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+    header img, footer img {
+      height: 50px;
+    }
+
+    header nav a, footer nav a {
+      color: #222;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    header nav a:hover, footer nav a:hover {
+      color: #007bff;
+    }
+
+    main {
+      padding: 40px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      font-weight: bold;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .design-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .design-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .design-row:nth-child(2) { animation-delay: 0.2s; }
+    .design-row:nth-child(3) { animation-delay: 0.4s; }
+    .design-row:nth-child(4) { animation-delay: 0.6s; }
+    .design-row:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .design-card {
+      width: 48%;
+      aspect-ratio: 1 / 1;
+      background-color: #eaeaea;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .design-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .design-description {
+      width: 48%;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      text-align: center;
+    }
+
+    .design-description h2 {
+      color: #003366;
+      font-size: 24px;
+      margin-bottom: 12px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .design-row {
+        flex-direction: column;
+      }
+
+      .design-card, .design-description {
+        width: 100%;
+      }
+    }header {
+  background-color: #f0f8fc;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header img {
+  height: 50px;
+  cursor: pointer;
+}
+
+header nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007bff;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+.footer {
+  background-color: #f1f8fc  ;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal-width columns */
+  gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 4px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #0d0d0d;
+}
+
+.footer-column p {
+  margin: 4px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000000;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #080808;
+}
+/* Base header style */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* OK for logo vs nav */
+  background-color: #f1f8fc;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 20px; /* This creates even gap between nav links */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a:first-child {
+  margin-left: 0; /* Prevents first item from having margin */
+}
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* adjust if needed */
+    right: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 99;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.footer {
+  background-color: #f1f8fc;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+.footer-column p {
+  margin: 6px 0;
+}
+
+.social-icons {
+  margin-top: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* Responsive footer for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: block; /* Show Contact column only */
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;  /* Center text inside */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+/* Base header style */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f8fc;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  height: 65px;
+}
+
+nav.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav.nav-links a:hover {
+  color: #007bff;
+}
+
+nav.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+nav.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  nav.nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+}
+.service-section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #fefefe;
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: transform 0.8s ease, opacity 0.8s ease;
+      opacity: 0;
+transform: translateY(40px);
+
+    }
+
+    .service-section.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #f9f9f9;
+    }
+
+    .service-text, .service-image {
+      flex: 1 1 500px;
+      padding: 40px;
+    }
+
+    .service-text h3 {
+      font-size: 28px;
+      color: #003366;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .service-section:hover .service-text h3 {
+      color: #f0a500;
+    }
+
+    .service-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .service-section:hover .service-image img {
+      transform: scale(1.05);
+    }
+   
+    .bot-icon {
+    position:sticky;
+    bottom: 10px;
+    left: 2000px;
+    background: #007BFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.bot-icon:hover { transform: scale(1.05); }
+.bot-icon img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+/* Chat Window */
+.chat-container {
+    position: sticky;
+    bottom: 10px;
+    left: 2000px;
+    width: 300px;
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease forwards;
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.chat-header {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.chat-header img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.header-left { display: flex; align-items: center; }
+.close-btn { cursor: pointer; font-weight: bold; font-size: 18px; }
+/* Chat Area */
+.chat-box {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background: #f1f8fc;
+}
+.message { margin-bottom: 12px; display: flex; align-items: flex-end; }
+.message.bot { flex-direction: row; }
+.message.user { justify-content: flex-end; }
+.bot-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.bubble {
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    max-width: 75%;
+    animation: fadeIn 0.3s ease;
+}
+.bubble.bot { background: #e0f7fa; }
+.bubble.user { background: #007BFF; color: white; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Input Area */
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    background: white;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+button.send-btn {
+    padding: 8px 12px;
+    margin-left: 6px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Quick Reply Buttons */
+.quick-buttons {
+    padding: 8px;
+    text-align: center;
+    background: #f4faff;
+}
+.quick-buttons button {
+    background: linear-gradient(135deg, #e7f3ff, #d0e7ff);
+    color: #007BFF;
+    margin: 3px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.quick-buttons button:hover {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+}
+.typing {
+    font-style: italic;
+    color: #777;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.href='main.html'">
+      <img src="./Untitled_design__3_-removebg-preview-removebg-preview.png" alt="Logo" />
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="main.html">Home</a>
+      <a href="Design.html">Our Design</a>
+      <a href="sample.html">Portfolio</a>
+      <a href="Services.html">Our Services</a>
+      <a href="Book.html">Book Your Service</a>
+      <a href="blog.html">Blogs</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+  <main>
+    
+    
+    <h1>Explore Our Designs</h1>
+
+    <!-- SERVICES -->
+    <!-- Each card block is repeated -->
+    <div class="service-section">
+      <div class="service-text"><h3>Bags</h3><p>Our bag design exemplifies creativity and functionality, perfect for modern retail and promotions. Crafted with aesthetics and usability in mind, these designs boost brand recognition and appeal...</p></div>
+      <div class="service-image"><img src="./IMG-20250614-WA0039.jpg" alt="Brand Management"></div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-text"><h3>Packaging</h3><p>Our packaging designs blend innovation and identity. Whether it’s eco-conscious materials or premium finishing, we create packages that protect and elevate your product presentation.</p></div>
+      <div class="service-image"><img src="./IMG-20250622-WA0010.jpg" alt="Print Media"></div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-text"><h3>Advertisement</h3><p>Striking and goal-driven, our ad creatives are designed to convert. With eye-catching visuals and strong messaging, our ad designs resonate across social, print, and digital platforms.</p></div>
+      <div class="service-image"><img src="./Artboard 13.jpg" alt="Traditional Marketing"></div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-text"><h3>Perfume</h3><p>From elegance to edge, our perfume branding and design combine sensory cues with luxury appeal. Every visual reflects the mood and identity of your fragrance brand.</p></div>
+      <div class="service-image"><img src="./SAVE_20250625_062610.jpg" alt="Social Media"></div>
+    </div>
+   
+    </div>
+    
+  </section>
+
+ 
+
+<!-- Chat Window -->
+
+   
+  </main>
+  <div class="bot-icon" onclick="toggleChat()">
+    <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+</div>
+
+<!-- Chat Window -->
+<div class="chat-container" id="chatContainer">
+    <div class="chat-header">
+        <div class="header-left">
+            <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+            AlphaMan
+        </div>
+        <div class="close-btn" onclick="toggleChat()">×</div>
+    </div>
+    <div class="chat-box" id="chatBox"></div>
+    <div class="quick-buttons" id="quickButtons"></div>
+</div>
+
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="Design.html">Our Design</a></li>
+          <li><a href="sample.html">Portfolio</a></li>
+          <li><a href="Services.html">Our Services</a></li>
+          <li><a href="Book.html">Book Your Service</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Social Media Advertising</a></li>
+          <li><a href="#">Traditional Advertising</a></li>
+          <li><a href="#">Marketing Campaigns</a></li>
+          <li><a href="#">Social Media Handling</a></li>
+          <li><a href="#">Web & SEO Solutions</a></li>
+          <li><a href="#">Website</a></li>
+          <li><a href="#">Photoshoot</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=team@alphamarkex.com" target="_blank" style="color: inherit; text-decoration: none;">
+            team@alphamarkex.com
+          </a>
+        </p>
+        <p>
+          <a href="tel:+919235860901" style="color: inherit; text-decoration: none;">
+            +91 9235860901
+          </a>
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/alphamarkex/?__pwa=1"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/AlphaMarkex"><i class="fab fa-x-twitter"></i></i></a>
+          
+
+          <a href="https://www.facebook.com/profile.php?id=61574942258668"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@AlphaMarkeX"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/919235860901"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Alphamarkex. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    // Reveal all service sections on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.service-section').forEach(el => {
+        el.classList.add('animate');
+      });
+    });
+  </script>
+  
+  <canvas id="stars" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+  
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+  
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < 120; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.2,
+          opacity: Math.random(),
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+  
+    function animateStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(star => {
+    const gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.radius * 3);
+    gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
+    gradient.addColorStop(0.5, `rgba(0, 191, 255, ${star.opacity})`);
+    gradient.addColorStop(1, `rgba(138, 43, 226, 0)`); // deep purple edge fade
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius * 3, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    star.x -= star.speed;
+    star.y -= star.speed;
+    if (star.x < 0 || star.y < 0) {
+      star.x = canvas.width;
+      star.y = canvas.height;
+    }
+  });
+  requestAnimationFrame(animateStars);
+}
+
+      
+      requestAnimationFrame(animateStars);
+    
+  
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars();
+    });
+  
+    resizeCanvas();
+    createStars();
+    animateStars();
+  </script>
+  
+  <script>
+    // Sound effect
+    const whoosh = new Audio("./whoosh-velocity-383019.mp3");
+    
+    function toggleChat() {
+        const chat = document.getElementById('chatContainer');
+        chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+        if (chat.style.display === 'flex') {
+            showMessage("bot", "Greetings, citizen! I’m AlphaMan — your brand’s superhero. How can I save your day?", true);
+            setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing"]);
+            
+        }
+    }
+    
+    function showMessage(sender, text, playSound=false) {
+        const chatBox = document.getElementById('chatBox');
+        const msg = document.createElement('div');
+        msg.className = `message ${sender}`;
+    
+        if (sender === "bot") {
+            const avatar = document.createElement('img');
+            avatar.src = "./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png";
+            avatar.className = "bot-avatar";
+            msg.appendChild(avatar);
+        }
+    
+        const bubble = document.createElement('div');
+        bubble.className = `bubble ${sender}`;
+        bubble.textContent = text;
+    
+        msg.appendChild(bubble);
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        if (playSound) whoosh.play();
+    }
+    
+    
+    function setQuickReplies(buttons) {
+        const quickArea = document.getElementById('quickButtons');
+        quickArea.innerHTML = "";
+        buttons.forEach(btnText => {
+            const btn = document.createElement('button');
+            btn.textContent = btnText;
+            btn.onclick = () => handleQuickReply(btnText);
+            quickArea.appendChild(btn);
+        });
+    }
+    
+    
+    
+    function handleQuickReply(choice) {
+        showMessage("user", choice, true);
+    
+        if (choice === "Services") {
+            showMessage("bot", "Here’s my heroic arsenal of services! Choose one to reveal its powers:", true);
+            setQuickReplies([
+                "Video Editing", "Thumbnail Design", "SMO", "Print Design", "Branding",
+                "Traditional Marketing", "Social Media Marketing", "Portfolio Creation",
+                "Landing Page", "Packaging Design", "Social Media Management", "Website",
+                "Logo Designing", "Photoshoots", "Campaigns", "Back"
+            ]);
+        }
+        else if (choice === "Booking") {
+            showMessage("bot", "To book my superhero skills, I’ll fly you to the booking page now! 🦸‍♂️", true);
+            setTimeout(()=>{ window.location.href = "book.html"; }, 1500);
+        }
+        else if (choice === "Contact Us") {
+            showMessage("bot", "📧 Mail us at team@alphamarkex.com or 📞 call on 6306837440 — We’ll reach you in 24 hours!", true);
+        }
+        else if (choice === "About Us") {
+            showMessage("bot", "We are AlphaMarkex — blending creativity & heroism to make your brand soar above the rest!", true);
+        }
+        else if (choice === "Pricing") {
+        showMessage("bot", "Even superheroes have fair rates! Let’s discuss and make your budget fly high. Fill the form below to get a quote.", true);
+        
+        // Add Yes/No buttons
+        setTimeout(() => {
+            const chatBox = document.getElementById("chat-box");
+            const buttonWrapper = document.createElement("div");
+            buttonWrapper.style.marginTop = "10px";
+    
+            // Yes button
+            const yesBtn = document.createElement("button");
+            yesBtn.innerText = "Yes";
+            yesBtn.style.marginRight = "10px";
+            yesBtn.classList.add("quick-btn");
+            yesBtn.onclick = () => {
+                window.location.href = "book.html";
+            };
+    
+            // No button
+            const noBtn = document.createElement("button");
+            noBtn.innerText = "No";
+            noBtn.classList.add("quick-btn");
+            noBtn.onclick = () => {
+                showMessage("bot", "Alright! How may I help you today?", true);
+                showQuickReplies(); // re-show your quick reply buttons
+            };
+    
+            buttonWrapper.appendChild(yesBtn);
+            buttonWrapper.appendChild(noBtn);
+            chatBox.appendChild(buttonWrapper);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 500);
+    }
+    
+        else if (choice === "Portfolio") {
+            showMessage("bot", "Feast your eyes on my past heroic deeds! 📂 [Link to portfolio here]", true);
+        }
+        else if (choice === "Back") {
+            setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing", "Portfolio"]);
+        }
+        else {
+            // Individual services replies
+            const replies = {
+                "Video Editing": "I splice, dice, and add cinematic flair so your videos have more punch than a supervillain’s plot!",
+                "Thumbnail Design": "Thumbnails so good, people will click faster than a speeding bullet!",
+                "SMO": "Social Media Optimization — making your brand more visible than a hero’s cape in the wind.",
+                "Print Design": "From flyers to posters, I make print materials that leap off the page!",
+                "Branding": "I craft your identity so strong, even kryptonite can’t weaken it.",
+                "Traditional Marketing": "Old-school tactics with a heroic twist — billboards, flyers, and more!",
+                "Social Media Marketing": "I’ll boost your social presence faster than I chase villains.",
+                "Portfolio Creation": "I’ll present your best work so well it could win awards.",
+                "Landing Page": "Pages so persuasive, visitors can’t resist taking action!",
+                "Packaging Design": "Make your product look like it belongs in a hero’s utility belt.",
+                "Social Media Management": "I’ll handle your posts while you handle your success.",
+                "Website": "I’ll build a fortress of code that looks amazing and performs even better.",
+                "Logo Designing": "Your brand’s emblem — designed to inspire like the Bat-Signal.",
+                "Photoshoots": "Capture moments so epic, they belong in a comic book.",
+                "Campaigns": "Strategic missions to win hearts, minds, and market share."
+            };
+            if (replies[choice]) {
+                showMessage("bot", replies[choice], true);
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

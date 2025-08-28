@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.{png,jpg,jpeg,svg,gif,webp,avif,mp4,mp3,pdf}", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/main.html" }
+  ]
+}
+
+

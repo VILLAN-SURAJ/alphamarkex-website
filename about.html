@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Alphamarkex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Add this in your <head> -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="icon" type="image/png" href="./Untitled_design__3_-removebg-preview-removebg-preview.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #222;
+      --section-bg: #fafafa;
+      --card-bg: #fff;
+      --footer-bg: #0a0a0a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      transition: all 0.3s ease;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      border-bottom: 1px solid #ddd;
+      background: var(--bg-color);
+      animation: fadeIn 1s ease-in;
+    }
+    header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f1f8fc; /* match the color in your image */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 65px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .brand-hero {
+      background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .brand-hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .brand-hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      background: var(--section-bg);
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: var(--text-color);
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .split-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-top: 60px;
+      animation: fadeInUp 2s ease;
+      background-color: #000;
+    }
+
+    .split-section .image {
+      flex: 1 1 50%;
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+    }
+
+    .split-section .content {
+      flex: 1 1 50%;
+      padding: 60px 20px;
+      color: #fff;
+    }
+
+    .split-section h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .split-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .services-list div {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      text-align: center;
+      font-size: 16px;
+      animation: fadeInUp 1.5s ease;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .services-list div:hover {
+      transform: scale(1.03);
+    }
+
+    .services-list div img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .video-section {
+      text-align: center;
+      margin: 40px auto;
+      animation: fadeIn 2s ease;
+    }
+
+    video {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .newsletter {
+      text-align: center;
+      margin: 60px auto;
+      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer {
+  background-color: #f1f8fc  ;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal-width columns */
+  gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 4px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #0d0d0d;
+}
+
+.footer-column p {
+  margin: 4px 0;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000000;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+   
+    
+
+    @media(max-width: 768px) {
+      .brand-hero h1 {
+        font-size: 36px;
+      }
+
+      .split-section {
+        flex-direction: column;
+      }
+
+      .split-section .image,
+      .split-section .content {
+        width: 100%;
+        min-height: 200px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .newsletter button {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+
+   
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* OK for logo vs nav */
+  background-color: #f1f8fc;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 20px; /* This creates even gap between nav links */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a:first-child {
+  margin-left: 0; /* Prevents first item from having margin */
+}
+
+.footer {
+  background-color: #f1f8fc;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+.footer-column p {
+  margin: 6px 0;
+}
+
+.social-icons {
+  margin-top: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* Responsive footer for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: block; /* Show Contact column only */
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;  /* Center text inside */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+/* Base header style */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f8fc;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  height: 65px;
+}
+
+nav.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav.nav-links a:hover {
+  color: #007bff;
+}
+
+nav.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+nav.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  nav.nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+.bot-icon {
+    position:sticky;
+    bottom: 10px;
+    left: 2000px;
+    background: #007BFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.bot-icon:hover { transform: scale(1.05); }
+.bot-icon img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+/* Chat Window */
+.chat-container {
+    position: sticky;
+    bottom: 10px;
+    left: 2000px;
+    width: 300px;
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease forwards;
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.chat-header {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.chat-header img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.header-left { display: flex; align-items: center; }
+.close-btn { cursor: pointer; font-weight: bold; font-size: 18px; }
+/* Chat Area */
+.chat-box {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background: #f1f8fc;
+}
+.message { margin-bottom: 12px; display: flex; align-items: flex-end; }
+.message.bot { flex-direction: row; }
+.message.user { justify-content: flex-end; }
+.bot-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.bubble {
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    max-width: 75%;
+    animation: fadeIn 0.3s ease;
+}
+.bubble.bot { background: #e0f7fa; }
+.bubble.user { background: #007BFF; color: white; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Input Area */
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    background: white;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+button.send-btn {
+    padding: 8px 12px;
+    margin-left: 6px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Quick Reply Buttons */
+.quick-buttons {
+    padding: 8px;
+    text-align: center;
+    background: #f4faff;
+}
+.quick-buttons button {
+    background: linear-gradient(135deg, #e7f3ff, #d0e7ff);
+    color: #007BFF;
+    margin: 3px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.quick-buttons button:hover {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+}
+.typing {
+    font-style: italic;
+    color: #777;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo" onclick="location.href='main.html'">
+      <img src="./Untitled_design__3_-removebg-preview-removebg-preview.png" alt="Logo" />
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="main.html">Home</a>
+      <a href="Design.html">Our Design</a>
+      <a href="sample.html">Portfolio</a>
+      <a href="Services.html">Our Services</a>
+      <a href="Book.html">Book Your Service</a>
+      <a href="blog.html">Blogs</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+  
+  
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+  
+
+<section class="brand-hero">
+  <h1>About AlphaMarkeX</h1>
+  <p>At Alphamarkex, we are a performance-driven marketing firm dedicated to helping brands grow with clarity, creativity, and conversion.</p>
+</section>
+
+<div class="section">
+  <h2>Our Story</h2>
+  <p>In a world buzzing with brands, Alphamarkex was born not just to be another marketing agency — but to become the alpha voice in the marketplace.
+  Founded with a fierce belief that every brand has a story worth telling, Alphamarkex emerged from the fusion of creativity, data, and bold ambition. What started as a small team of dreamers, designers, and digital strategists quickly grew into a full-force branding and marketing agency — helping businesses of all sizes amplify their identity, capture attention, and convert ideas into impact. We are brand architects, growth hackers, and storytellers.</p>
+</div>
+
+<div class="split-section">
+  <div class="image" style="background-image:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80');"></div>
+  <div class="content">
+    <h2>Our Vision</h2>
+    <p>At Alphamarkex, we believe marketing is not just about visibility — it’s about direction, impact, and growth. In today’s fast-moving world, where businesses often overlook the connection between marketing and sales, we bring the clarity that aligns both. Our vision is to deliver real marketing — rooted in strategy, creativity, and purpose — while filtering out the noise of unreliable providers.</p>
+    <h2>Our Mission</h2>
+    <p>Our mission is to bridge the gap in the market by being a trusted partner, offering authentic, result-driven services that truly help businesses grow. We aim to build long-term relationships based on trust, performance, and shared success. Just like a structure stands tall on strong foundations, we support every client with passion, planning, and precision — the 3Ps that define us.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>What We Offer</h2>
+  <div class="services-list">
+    <div>
+      <img src="ChatGPT Image Jul 16, 2025, 05_42_57 PM.png" alt="Social Media Marketing">
+      <strong>Social Media Marketing</strong><br>
+      Grow your audience with strategic content and consistent engagement.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 05_52_43 PM.png" alt="Traditional Advertising">
+      <strong>Traditional Advertising</strong><br>
+      Drive impact through TV, radio, print, and outdoor brand campaigns.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 06_02_39 PM.png" alt="Campaigns">
+      <strong>Campaigns (Email, Google, Audio/SMS)</strong><br>
+      Targeted campaigns that deliver your message directly and effectively.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 06_07_26 PM.png" alt="SEO & Web Dev">
+      <strong>SEO </strong><br>
+      Optimize your online presence with smart design and top Google rankings.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 06_11_49 PM.png" alt="Website">
+      <strong>Website</strong><br>
+      Design high-performing websites that convert visitors into loyal customers.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 06_32_34 PM.png" alt="Photoshoot">
+      <strong>Photoshoot</strong><br>
+      Professional photography that elevates your brand’s visual storytelling.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Jul 16, 2025, 06_51_53 PM.png" alt="Branding">
+      <strong>Branding</strong><br>
+      Craft a powerful identity that reflects your values and sets you apart.
+    </div>
+    <div>
+      <img src="./ChatGPT Image Aug 27, 2025, 03_18_33 AM.png" alt="Packaging Designing">
+      <strong>Packaging Designing</strong><br>
+      Design packaging that attracts, communicates, and sells your product.
+    </div>
+  </div>
+</div>
+
+<div class="video-section">
+  <h2>Introduction</h2>
+  <video controls>
+    <source src="./WhatsApp Video 2025-07-19 at 20.25.06_7347801a.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="newsletter">
+  <h2>Join Our Newsletter</h2>
+  <p>Stay updated with the latest insights and marketing tips.</p>
+  <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+<audio autoplay loop hidden>
+  <source src="background-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+</section>
+
+<div class="bot-icon" onclick="toggleChat()">
+  <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+</div>
+
+
+<!-- Chat Window -->
+<div class="chat-container" id="chatContainer">
+  <div class="chat-header">
+      <div class="header-left">
+          <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+          AlphaMan
+      </div>
+      <div class="close-btn" onclick="toggleChat()">×</div>
+  </div>
+  <div class="chat-box" id="chatBox"></div>
+  <div class="quick-buttons" id="quickButtons"></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="Design.html">Our Design</a></li>
+        <li><a href="sample.html">Portfolio</a></li>
+        <li><a href="Services.html">Our Services</a></li>
+        <li><a href="Book.html">Book Your Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Social Media Advertising</a></li>
+        <li><a href="#">Traditional Advertising</a></li>
+        <li><a href="#">Marketing Campaigns</a></li>
+        <li><a href="#">Social Media Handling</a></li>
+        <li><a href="#">Web & SEO Solutions</a></li>
+        <li><a href="#">Website</a></li>
+        <li><a href="#">Photoshoot</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=team@alphamarkex.com" target="_blank" style="color: inherit; text-decoration: none;">
+          team@alphamarkex.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+919235860901" style="color: inherit; text-decoration: none;">
+          +91 9235860901
+        </a>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/alphamarkex/?__pwa=1"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/AlphaMarkex"><i class="fab fa-x-twitter"></i>
+        </i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574942258668"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@AlphaMarkeX"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919235860901" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Alphamarkex. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Sound effect
+  const whoosh = new Audio("./whoosh-velocity-383019.mp3");
+  
+  function toggleChat() {
+      const chat = document.getElementById('chatContainer');
+      chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+      if (chat.style.display === 'flex') {
+          showMessage("bot", "Greetings, citizen! I’m AlphaMan — your brand’s superhero. How can I save your day?", true);
+          setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing"]);
+          
+      }
+  }
+  
+  function showMessage(sender, text, playSound=false) {
+      const chatBox = document.getElementById('chatBox');
+      const msg = document.createElement('div');
+      msg.className = `message ${sender}`;
+  
+      if (sender === "bot") {
+          const avatar = document.createElement('img');
+          avatar.src = "./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png";
+          avatar.className = "bot-avatar";
+          msg.appendChild(avatar);
+      }
+  
+      const bubble = document.createElement('div');
+      bubble.className = `bubble ${sender}`;
+      bubble.textContent = text;
+  
+      msg.appendChild(bubble);
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      if (playSound) whoosh.play();
+  }
+  
+  
+  function setQuickReplies(buttons) {
+      const quickArea = document.getElementById('quickButtons');
+      quickArea.innerHTML = "";
+      buttons.forEach(btnText => {
+          const btn = document.createElement('button');
+          btn.textContent = btnText;
+          btn.onclick = () => handleQuickReply(btnText);
+          quickArea.appendChild(btn);
+      });
+  }
+  
+  
+  
+  function handleQuickReply(choice) {
+      showMessage("user", choice, true);
+  
+      if (choice === "Services") {
+          showMessage("bot", "Here’s my heroic arsenal of services! Choose one to reveal its powers:", true);
+          setQuickReplies([
+              "Video Editing", "Thumbnail Design", "SMO", "Print Design", "Branding",
+              "Traditional Marketing", "Social Media Marketing", "Portfolio Creation",
+              "Landing Page", "Packaging Design", "Social Media Management", "Website",
+              "Logo Designing", "Photoshoots", "Campaigns", "Back"
+          ]);
+      }
+      else if (choice === "Booking") {
+          showMessage("bot", "To book my superhero skills, I’ll fly you to the booking page now! 🦸‍♂️", true);
+          setTimeout(()=>{ window.location.href = "book.html"; }, 1500);
+      }
+      else if (choice === "Contact Us") {
+          showMessage("bot", "📧 Mail us at team@alphamarkex.com or 📞 call on 6306837440 — We’ll reach you in 24 hours!", true);
+      }
+      else if (choice === "About Us") {
+          showMessage("bot", "We are AlphaMarkex — blending creativity & heroism to make your brand soar above the rest!", true);
+      }
+      else if (choice === "Pricing") {
+      showMessage("bot", "Even superheroes have fair rates! Let’s discuss and make your budget fly high. Fill the form below to get a quote.", true);
+      
+      // Add Yes/No buttons
+      setTimeout(() => {
+          const chatBox = document.getElementById("chat-box");
+          const buttonWrapper = document.createElement("div");
+          buttonWrapper.style.marginTop = "10px";
+  
+          // Yes button
+          const yesBtn = document.createElement("button");
+          yesBtn.innerText = "Yes";
+          yesBtn.style.marginRight = "10px";
+          yesBtn.classList.add("quick-btn");
+          yesBtn.onclick = () => {
+              window.location.href = "book.html";
+          };
+  
+          // No button
+          const noBtn = document.createElement("button");
+          noBtn.innerText = "No";
+          noBtn.classList.add("quick-btn");
+          noBtn.onclick = () => {
+              showMessage("bot", "Alright! How may I help you today?", true);
+              showQuickReplies(); // re-show your quick reply buttons
+          };
+  
+          buttonWrapper.appendChild(yesBtn);
+          buttonWrapper.appendChild(noBtn);
+          chatBox.appendChild(buttonWrapper);
+          chatBox.scrollTop = chatBox.scrollHeight;
+      }, 500);
+  }
+  
+      else if (choice === "Portfolio") {
+          showMessage("bot", "Feast your eyes on my past heroic deeds! 📂 [Link to portfolio here]", true);
+      }
+      else if (choice === "Back") {
+          setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing", "Portfolio"]);
+      }
+      else {
+          // Individual services replies
+          const replies = {
+              "Video Editing": "I splice, dice, and add cinematic flair so your videos have more punch than a supervillain’s plot!",
+              "Thumbnail Design": "Thumbnails so good, people will click faster than a speeding bullet!",
+              "SMO": "Social Media Optimization — making your brand more visible than a hero’s cape in the wind.",
+              "Print Design": "From flyers to posters, I make print materials that leap off the page!",
+              "Branding": "I craft your identity so strong, even kryptonite can’t weaken it.",
+              "Traditional Marketing": "Old-school tactics with a heroic twist — billboards, flyers, and more!",
+              "Social Media Marketing": "I’ll boost your social presence faster than I chase villains.",
+              "Portfolio Creation": "I’ll present your best work so well it could win awards.",
+              "Landing Page": "Pages so persuasive, visitors can’t resist taking action!",
+              "Packaging Design": "Make your product look like it belongs in a hero’s utility belt.",
+              "Social Media Management": "I’ll handle your posts while you handle your success.",
+              "Website": "I’ll build a fortress of code that looks amazing and performs even better.",
+              "Logo Designing": "Your brand’s emblem — designed to inspire like the Bat-Signal.",
+              "Photoshoots": "Capture moments so epic, they belong in a comic book.",
+              "Campaigns": "Strategic missions to win hearts, minds, and market share."
+          };
+          if (replies[choice]) {
+              showMessage("bot", replies[choice], true);
+          }
+      }
+  }
+  </script>
+
+<canvas id="stars" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+<script>
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function createStars() {
+    stars = [];
+    for (let i = 0; i < 120; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.2,
+        opacity: Math.random(),
+        speed: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+
+  function animateStars() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+stars.forEach(star => {
+  const gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.radius * 3);
+  gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
+  gradient.addColorStop(0.5, `rgba(0, 191, 255, ${star.opacity})`);
+  gradient.addColorStop(1, `rgba(138, 43, 226, 0)`); // deep purple edge fade
+
+  ctx.beginPath();
+  ctx.arc(star.x, star.y, star.radius * 3, 0, Math.PI * 2);
+  ctx.fillStyle = gradient;
+  ctx.fill();
+
+  star.x -= star.speed;
+  star.y -= star.speed;
+  if (star.x < 0 || star.y < 0) {
+    star.x = canvas.width;
+    star.y = canvas.height;
+  }
+});
+requestAnimationFrame(animateStars);
+}
+
+    
+    requestAnimationFrame(animateStars);
+  
+
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    createStars();
+  });
+
+  resizeCanvas();
+  createStars();
+  animateStars();
+</script>
+
+</body>
+</html>

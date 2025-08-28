@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alphamarkex Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- ✅ Good: Font Awesome 6.5 (has fa-x-twitter) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Add this in your <head> -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<link rel="icon" type="image/png" href="./Untitled_design__3_-removebg-preview-removebg-preview.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --accent: #007bff;
+      --accent-hover: #339dff;
+      --text: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header, footer {
+      background-color: #f0f8fc;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img, footer img {
+      height: 50px;
+    }
+
+    header nav a, footer nav a {
+      color: #222;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    header nav a:hover, footer nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2em;
+      color: var(--accent);
+    }
+
+    .poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 40px;
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keep all posters square */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-auto-rows: 200px;
+      gap: 10px;
+      padding: 0 40px 60px;
+    }
+
+    .collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      
+      
+    }
+
+    .collage .wide {
+      grid-column: span 2;
+      
+    }
+
+    .collage .tall {
+      grid-row: span 2;
+    }
+
+    .collage .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    @media (max-width: 768px) {
+      .poster-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .collage {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+      }
+    }
+    .team-section, .trusted-section {
+      background:#ffffff ;
+      color: #080707;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .team-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+
+    }
+
+    .team-card {
+      width: 250px;
+    }
+
+    .team-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .team-card h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .team-card p {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #060606;
+    }
+
+    .trusted-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .trusted-logos img {
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .footer {
+  background-color: #f1f8fc  ;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal-width columns */
+  gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 4px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #0d0d0d;
+}
+
+.footer-column p {
+  margin: 4px 0;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000000;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header img {
+  height: 50px;
+  cursor: pointer;
+}
+
+header nav a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover {
+  color: #007bff;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f1f8fc; /* match the color in your image */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quote-section {
+  padding: 60px 20px;
+  background: transparent;
+  color: #111;
+  text-align: center;
+}
+
+.quote-section h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #f0a500;
+  font-weight: 600;
+}
+
+.quote-form {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-form table {
+  border-collapse: collapse;
+  background: transparent;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 650px;
+}
+
+.quote-form td {
+  padding: 20px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.quote-form label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: #f0a500;
+  background-color: #fff;
+}
+
+.quote-form button {
+  margin-top: 10px;
+  padding: 14px 40px;
+  background-color: #f0a500;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-form button:hover {
+  background-color: #d18c00;
+}
+
+@media (max-width: 600px) {
+  .quote-form table {
+    width: 100%;
+  }
+
+  .quote-form td {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-bottom-color: #f0a500;
+}
+
+.footer {
+  background-color: #f1f8fc;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 15px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #0d0d0d;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column ul li a {
+  color: #0d0d0d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #007bff;
+}
+
+.footer-column p {
+  margin: 6px 0;
+}
+
+.social-icons {
+  margin-top: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0e0d0d;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #080808;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* Responsive footer for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: block; /* Show Contact column only */
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;  /* Center text inside */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column:last-child h4 {
+    display: block;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+/* Base header style */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f8fc;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  height: 65px;
+}
+
+nav.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav.nav-links a:hover {
+  color: #007bff;
+}
+
+nav.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+nav.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  nav.nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .mobile-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-slide {
+    min-width: 80%;
+    flex-shrink: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-slide img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-btn.left {
+    left: 10px;
+  }
+
+  .nav-btn.right {
+    right: 10px;
+  }
+
+  .poster-grid {
+    display: none; /* hide grid on mobile */
+  }
+}
+
+/* Show grid on desktop */
+@media (min-width: 769px) {
+  .slider-wrapper {
+    display: none; /* hide slider on desktop */
+  }
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .mobile-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #fff;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.95);
+    border: none;
+    font-size: 22px;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .nav-btn.left {
+    left: 8px;
+  }
+
+  .nav-btn.right {
+    right: 8px;
+  }
+
+  .poster-grid {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .slider-wrapper {
+    display: none;
+  }
+
+  .poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .poster img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}
+@media (max-width: 768px) {
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .mobile-slider {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+
+  .mobile-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+
+  .mobile-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav-btn::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+  margin: auto;
+  transition: border-color 0.3s ease;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right::before {
+  transform: rotate(135deg);
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+/* Hover: background white, arrow black */
+
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-btn::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+  margin-left: 8px;
+}
+
+.slider-btn.right::before {
+  transform: rotate(135deg);
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: white;
+}
+
+.slider-btn:hover::before {
+  border-color: black;
+}
+
+/* FRAME YOUR SUCCESS base styles */
+.frame-success {
+  background: transparent;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.frame-success h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Gallery container with buttons */
+.frame-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Image grid for desktop and mobile */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-auto-rows: 140px;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Image size modifiers */
+.gallery img.tall {
+  grid-row: span 2;
+}
+
+.gallery img.wide {
+  grid-column: span 2;
+}
+
+.gallery img.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* Only show scroll buttons on mobile */
+@media screen and (min-width: 768px) {
+  .scroll-btn {
+    display: none;
+  }
+}
+.slider-image {
+  width: 100%;
+  height: auto;              /* ← Don't fix height */
+  object-fit: contain;       /* ← Ensures full image shows */
+  border-radius: 12px;
+  display: block;
+}
+.slider-item {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.slide {
+  scroll-snap-align: start;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* or "contain" depending on need */
+  border-radius: 12px; /* Optional for rounded look */
+}
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+.image-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain; /* or 'cover' based on image style */
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.nav.prev {
+  left: 10px;
+}
+.nav.next {
+  right: 10px;
+}
+
+
+/* Wrapper around slider */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Slider track (slides container) */
+.mobile-slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Each individual slide */
+.mobile-slide {
+  flex: 0 0 100%; /* Force exactly 1 full slide per view */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Image inside slide */
+.mobile-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Arrow buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+/* Optional: Hide on desktop */
+@media (min-width: 768px) {
+  .slider-wrapper {
+    display: none;
+  }
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 100; /* Higher than all other elements */
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+/* Base desktop layout (assume image floats or is inline, default behavior) */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Target mobile only */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack vertically on mobile */
+    text-align: center;
+  }
+
+  .hero-image {
+    order: 2; /* Comes after paragraph */
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem 0;
+  }
+
+  .quote-btn {
+    order: 3; /* Below image */
+  }
+
+  .hero-content h1 {
+    order: 0;
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    order: 1;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+#frame-your-success.masonry-mobile {
+  column-count: 2;
+  column-gap: 12px;
+  padding: 16px;
+}
+
+#frame-your-success.masonry-mobile img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: block;
+  break-inside: avoid;
+}
+
+@media (min-width: 768px) {
+  #frame-your-success.masonry-mobile {
+    column-count: unset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  #frame-your-success.masonry-mobile img {
+    width: calc(33.333% - 10px);
+    margin: 0;
+  }
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ✅ Mobile fix */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .hero-text .btn {
+    order: 3;
+    margin-top: 20px;
+  }
+}
+
+.bot-icon {
+    position:sticky;
+    bottom: 10px;
+    left: 2000px;
+    background: #007BFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.bot-icon:hover { transform: scale(1.05); }
+.bot-icon img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+/* Chat Window */
+.chat-container {
+    position: sticky;
+    bottom: 10px;
+    left: 2000px;
+    width: 300px;
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease forwards;
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.chat-header {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.chat-header img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.header-left { display: flex; align-items: center; }
+.close-btn { cursor: pointer; font-weight: bold; font-size: 18px; }
+/* Chat Area */
+.chat-box {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background: #f1f8fc;
+}
+.message { margin-bottom: 12px; display: flex; align-items: flex-end; }
+.message.bot { flex-direction: row; }
+.message.user { justify-content: flex-end; }
+.bot-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.bubble {
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    max-width: 75%;
+    animation: fadeIn 0.3s ease;
+}
+.bubble.bot { background: #e0f7fa; }
+.bubble.user { background: #007BFF; color: white; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Input Area */
+.input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    background: white;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+button.send-btn {
+    padding: 8px 12px;
+    margin-left: 6px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Quick Reply Buttons */
+.quick-buttons {
+    padding: 8px;
+    text-align: center;
+    background: #f4faff;
+}
+.quick-buttons button {
+    background: linear-gradient(135deg, #e7f3ff, #d0e7ff);
+    color: #007BFF;
+    margin: 3px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.quick-buttons button:hover {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+}
+.typing {
+    font-style: italic;
+    color: #777;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+.video-section {
+      text-align: center;
+      margin: 40px auto;
+      animation: fadeIn 2s ease;
+    }
+
+    video {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo" onclick="location.href='main.html'">
+    <img src="./Untitled_design__3_-removebg-preview-removebg-preview.png" alt="Logo" />
+  </div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <nav class="nav-links">
+    <a href="main.html">Home</a>
+    <a href="Design.html">Our Design</a>
+    <a href="sample.html">Portfolio</a>
+    <a href="Services.html">Our Services</a>
+    <a href="Book.html">Book Your Service</a>
+    <a href="blog.html">Blogs</a>
+    <a href="about.html">About Us</a>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+ 
+
+  
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+      <h1>TRANSFORM YOUR BRAND</h1>
+      <p>AlphaMarkeX, the leading marketing company, helps brands thrive across all the platforms. We prioritize creativity and results to push your brand toward sustainable growth.</p>
+      <button class="btn" onclick="location.href='book.html'">Get a Quote</button>
+    </div>
+  
+    <div class="hero-image">
+      <img src="./Alpha Frontv page.png" alt="Ad Campaign">
+    </div>
+  </section>
+  
+
+<!-- BAG YOUR SUCCESS Section -->
+
+
+<!-- BAG SECTION -->
+<h2>BAG</h2>
+
+<!-- Desktop Grid -->
+<section class="poster-grid">
+  <div class="poster"><img src="./WhatsApp Image 2025-06-14 at 15.06.35_db1afa61.jpg" alt="Bag 1"></div>
+  <div class="poster"><img src="./IMG-20250614-WA0039.jpg" alt="Bag 2"></div>
+  <div class="poster"><img src="./SAVE_20250627_214627.jpg" alt="Bag 3"></div>
+</section>
+
+<!-- Mobile Slider -->
+<div class="slider-wrapper">
+    <button class="nav-btn left"></button>
+  <div class="mobile-slider">
+    <div class="mobile-slide"><img src="./WhatsApp Image 2025-06-14 at 15.06.35_db1afa61.jpg" alt="Bag 1"></div>
+    <div class="mobile-slide"><img src="./IMG-20250614-WA0039.jpg" alt="Bag 2"></div>
+    <div class="mobile-slide"><img src="./SAVE_20250627_214627.jpg" alt="Bag 3"></div>
+  </div>
+  <button class="nav-btn right"></button>
+</div>
+
+<!-- PACKAGING SECTION -->
+<h2>Packaging</h2>
+
+<section class="poster-grid">
+  <div class="poster"><img src="./Noodles Cup Mockup.jpg" alt="Packaging 1"></div>
+  <div class="poster"><img src="./IMG-20250622-WA0012.jpg" alt="Packaging 2"></div>
+  <div class="poster"><img src="./cosmetic amber jar.png" alt="Packaging 3"></div>
+</section>
+
+<div class="slider-wrapper">
+    <button class="nav-btn left"></button>
+  <div class="mobile-slider">
+    <div class="mobile-slide"><img src="./Noodles Cup Mockup.jpg" alt="Packaging 1"></div>
+    <div class="mobile-slide"><img src="./IMG-20250622-WA0012.jpg" alt="Packaging 2"></div>
+    <div class="mobile-slide"><img src="./cosmetic amber jar.png" alt="Packaging 3"></div>
+  </div>
+  <button class="nav-btn right"></button>
+</div>
+
+<!-- PHOTOSHOOT SECTION -->
+<h2>Photoshoot</h2>
+
+<section class="poster-grid">
+  <div class="poster"><img src="./IMG_7293[2].JPG" alt="Shoot 1"></div>
+  <div class="poster"><img src="./IMG_7282.JPG" alt="Shoot 2"></div>
+  <div class="poster"><img src="./IMG_7141.JPG" alt="Shoot 3"></div>
+</section>
+
+<div class="slider-wrapper">
+    <button class="nav-btn left"></button>
+  
+    <div class="mobile-slider">
+      <div class="mobile-slide"><img src="./IMG_7293[2].JPG" alt="Shoot 1"></div>
+      <div class="mobile-slide"><img src="./IMG_7282.JPG" alt="Shoot 2"></div>
+      <div class="mobile-slide"><img src="./IMG_7141.JPG" alt="Shoot 3"></div>
+    </div>
+  
+    <button class="nav-btn right"></button>
+  </div>
+  
+
+
+  <h2>Advertisement</h2>
+
+<section class="poster-grid">
+  <div class="poster"><img src="./10 (2).png" alt="Shoot 1"></div>
+  <div class="poster"><img src="./10 (3).png" alt="Shoot 2"></div>
+  <div class="poster"><img src="./10 (4).png" alt="Shoot 3"></div>
+</section>
+
+
+<div class="slider-wrapper">
+  <button class="nav-btn left"></button>
+
+  <div class="mobile-slider">
+    <div class="mobile-slide"><img src="./10 (2).png" alt="Shoot 1"></div>
+    <div class="mobile-slide"><img src="./10 (3).png" alt="Shoot 2"></div>
+    <div class="mobile-slide"><img src="./10 (4).png" alt="Shoot 3"></div>
+  </div>
+
+  <button class="nav-btn right"></button>
+</div>
+
+
+<section class="frame-success">
+  <h2>Thumbnail</h2>
+  <div class="frame-container">
+   
+
+    <div class="gallery" id="frameGallery">
+      
+
+      <img src="thumb1.png" class="wide" alt="Gallery 3" />
+
+      
+      
+      <img src="thumb2.png" class="wide" alt="Gallery 7" />
+      
+      
+      <img src="thumb3.png" class="wide" alt="Gallery 6" />
+      <img src="thumb4.png" class="wide" alt="Gallery 8" />
+      
+      <img src="./10 (1).png" class="wide" alt="Gallery 3" />
+      <img src="./10 (5).png" class="wide" alt="Gallery 3" />
+      <img src="./10 (6).png" class="wide" alt="Gallery 3" />
+      <img src="./10 (7).png" class="wide" alt="Gallery 3" />
+
+    </div>
+
+
+    
+  </div>
+</section>
+
+
+
+<!-- FRAME YOUR SUCCESS Collage Section -->
+<!-- Frame Your Success Section -->
+<section class="frame-success">
+    <h2>FRAME YOUR SUCCESS</h2>
+    <div class="frame-container">
+     
+  
+      <div class="gallery" id="frameGallery">
+        <img src="./Burgundy Indian Fashion Jewelry Shop Sale Facebook Post.png" class="big" alt="Gallery 1" />
+        <img src="./every_bite_150x150.png" alt="Gallery 2" />
+        <img src="./Yellow Pink Rajasthan Travel & Tourism Logo.png" alt="Gallery 5" />
+        <img src="./White Modern Adventure Vlog Youtube Thumbnail.png" class="wide" alt="Gallery 3" />
+        <img src="./Maroon Vibrant Indian Food Restaurant Promotion Instagram Post.png" alt="Gallery 4" />
+        
+        <img src="./IMG-20250716-WA0007[1].jpg"  alt="Gallery 6" />
+        <img src="./Black Minimalist Musician YouTube Channel Art.png" class="wide" alt="Gallery 7" />
+        <img src="./Words may wobble, laughs may rise, Truth in jokes, no disguise.png" alt="Gallery 8" />
+        <img src="./a7d71765-f25a-43cc-bb2d-2f1149431653.png" alt="Gallery 9" />
+        <img src="./img2.png" class="wide" alt="Gallery 7" />
+      </div>
+  
+
+      
+    </div>
+  </section>
+  <div class="video-section">
+    <h2>Video Advertisement</h2>
+    
+
+    <video controls>
+      <source src="./WhatsApp Video 2025-08-17 at 13.40.43_327a743a.mp4" class="wide" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<form id="quoteForm" class="quote-form">
+<section class="quote-section">
+  <h2>Get A Quote</h2>
+  <form action="https://script.google.com/macros/s/AKfycbyH6UXy3VZCg4adtQIEoLtn5LygQqoOdjGC0LDKjINqiyqBGxmBtTu0f4UJNtPgRTshLw/exec" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="quote-form">
+   
+
+    <table>
+      <tr>
+        <td><label for="name">Your Name</label></td>
+        <td><input type="text" id="name" name="Name" required></td>
+      </tr>
+      <tr>
+        <td><label for="business">Business Name</label></td>
+        <td><input type="text" id="business" name="Business" required></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone Number</label></td>
+        <td><input type="tel" id="phone" name="Phone" required></td>
+      </tr>
+      <tr>
+        <td><label for="services">Services You Need</label></td>
+        <td><input type="text" id="services" name="Services" required></td>
+      </tr>
+      <tr>
+        <td><label for="about">Tell Us About Your Business</label></td>
+        <td><textarea id="about" name="About" rows="4" required></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button type="submit">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) alert('Quote submitted successfully!')"></iframe>
+
+</section>
+
+</section>
+
+<div class="bot-icon" onclick="toggleChat()">
+  <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+</div>
+
+<!-- Chat Window -->
+<div class="chat-container" id="chatContainer">
+  <div class="chat-header">
+      <div class="header-left">
+          <img src="./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png" alt="AlphaMan">
+          AlphaMan
+      </div>
+      <div class="close-btn" onclick="toggleChat()">×</div>
+  </div>
+  <div class="chat-box" id="chatBox"></div>
+  <div class="quick-buttons" id="quickButtons"></div>
+</div>
+
+
+<script>
+  document.getElementById("quoteForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const data = {
+      Name: document.getElementById("name").value,
+      Business: document.getElementById("business").value,
+      Phone: document.getElementById("phone").value,
+      Services: document.getElementById("services").value,
+      About: document.getElementById("about").value,
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbzNWkh2Nl36k-Uq2hT9kgxnSTnWfut0MEaooIOkT1YUCXD_cB4qrKYxwOx9AxPaj7DtAA/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.result === "success") {
+          document.getElementById("responseMessage").textContent = "Form submitted successfully!";
+          document.getElementById("quoteForm").reset();
+        } else {
+          document.getElementById("responseMessage").textContent = "Error: " + res.error;
+        }
+      })
+      .catch((err) => {
+        document.getElementById("responseMessage").textContent = "Error submitting form!";
+        console.error(err);
+      });
+  });
+</script>
+  
+  <!-- Trusted By -->
+  
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="Design.html">Our Design</a></li>
+        <li><a href="sample.html">Portfolio</a></li>
+        <li><a href="Services.html">Our Services</a></li>
+        <li><a href="Book.html">Book Your Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Social Media Advertising</a></li>
+        <li><a href="#">Traditional Advertising</a></li>
+        <li><a href="#">Marketing Campaigns</a></li>
+        <li><a href="#">Social Media Handling</a></li>
+        <li><a href="#">Web & SEO Solutions</a></li>
+        <li><a href="#">Website</a></li>
+        <li><a href="#">Photoshoot</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=team@alphamarkex.com" target="_blank" style="color: inherit; text-decoration: none;">
+          team@alphamarkex.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+919235860901" style="color: inherit; text-decoration: none;">
+          +91 9235860901
+        </a>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/alphamarkex/?__pwa=1"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/AlphaMarkex"><i class="fab fa-x-twitter"></i></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574942258668"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@AlphaMarkeX"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919235860901"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Alphamarkex. All rights reserved.
+  </div>
+</footer>
+
+  <canvas id="stars" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+  
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+  
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < 120; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.2,
+          opacity: Math.random(),
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+  
+    function animateStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(star => {
+    const gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.radius * 3);
+    gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
+    gradient.addColorStop(0.5, `rgba(0, 191, 255, ${star.opacity})`);
+    gradient.addColorStop(1, `rgba(138, 43, 226, 0)`); // deep purple edge fade
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius * 3, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    star.x -= star.speed;
+    star.y -= star.speed;
+    if (star.x < 0 || star.y < 0) {
+      star.x = canvas.width;
+      star.y = canvas.height;
+    }
+  });
+  requestAnimationFrame(animateStars);
+}
+
+      
+      requestAnimationFrame(animateStars);
+    
+  
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars();
+    });
+  
+    resizeCanvas();
+    createStars();
+    animateStars();
+  </script>
+  
+  <script>
+    document.getElementById('toggleDark').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        document.body.style.backgroundColor = '#0e0e1a';
+        document.body.style.color = '#ffffff';
+      } else {
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
+      }
+    });
+  </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzNWkh2Nl36k-Uq2hT9kgxnSTnWfut0MEaooIOkT1YUCXD_cB4qrKYxwOx9AxPaj7DtAA/exec';
+  const form = document.getElementById('quoteForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Thank you! Your message has been submitted.");
+        form.reset();
+      } else {
+        alert("❌ Error submitting form. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("❌ There was an error. Please try again.");
+      console.error('Error!', error.message);
+    });
+  });
+</script>
+<script>
+    function initSliders() {
+      const sliders = document.querySelectorAll(".mobile-slider");
+  
+      sliders.forEach((slider, index) => {
+        let currentIndex = 0;
+        const slides = slider.querySelectorAll(".mobile-slide");
+  
+        slider.parentElement.querySelector(".left").addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+  
+        slider.parentElement.querySelector(".right").addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+      });
+    }
+  
+    window.addEventListener("DOMContentLoaded", initSliders);
+  </script>
+  
+  <script>
+    function scrollGallery(direction) {
+      const container = document.getElementById("frameGallery");
+      const scrollAmount = container.clientWidth * 0.8;
+      container.scrollBy({
+        left: direction === "right" ? scrollAmount : -scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  <script>
+  const slider = document.querySelector('.slider-container');
+  const slideWidth = slider.offsetWidth;
+  
+  document.querySelector('.next-btn').addEventListener('click', () => {
+    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+  });
+  
+  document.querySelector('.prev-btn').addEventListener('click', () => {
+    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+  });
+</script>
+<script>
+    const slider = document.querySelector('.mobile-slider');
+    const slides = document.querySelectorAll('.mobile-slide');
+    const leftBtn = document.querySelector('.nav-btn.left');
+    const rightBtn = document.querySelector('.nav-btn.right');
+  
+    let currentIndex = 0;
+  
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+  
+    leftBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+    rightBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+  </script>
+  
+  <script>
+    // Sound effect
+    const whoosh = new Audio("./whoosh-velocity-383019.mp3");
+    
+    function toggleChat() {
+        const chat = document.getElementById('chatContainer');
+        chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+        if (chat.style.display === 'flex') {
+            showMessage("bot", "Greetings, citizen! I’m AlphaMan — your brand’s superhero. How can I save your day?", true);
+            setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing", ""]);
+            
+        }
+    }
+    
+    function showMessage(sender, text, playSound=false) {
+        const chatBox = document.getElementById('chatBox');
+        const msg = document.createElement('div');
+        msg.className = `message ${sender}`;
+    
+        if (sender === "bot") {
+            const avatar = document.createElement('img');
+            avatar.src = "./ChatGPT Image Aug 7, 2025, 11_32_23 PM.png";
+            avatar.className = "bot-avatar";
+            msg.appendChild(avatar);
+        }
+    
+        const bubble = document.createElement('div');
+        bubble.className = `bubble ${sender}`;
+        bubble.textContent = text;
+    
+        msg.appendChild(bubble);
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        if (playSound) whoosh.play();
+    }
+    
+    
+    function setQuickReplies(buttons) {
+        const quickArea = document.getElementById('quickButtons');
+        quickArea.innerHTML = "";
+        buttons.forEach(btnText => {
+            const btn = document.createElement('button');
+            btn.textContent = btnText;
+            btn.onclick = () => handleQuickReply(btnText);
+            quickArea.appendChild(btn);
+        });
+    }
+    
+    
+    
+    function handleQuickReply(choice) {
+        showMessage("user", choice, true);
+    
+        if (choice === "Services") {
+            showMessage("bot", "Here’s my heroic arsenal of services! Choose one to reveal its powers:", true);
+            setQuickReplies([
+                "Video Editing", "Thumbnail Design", "SMO", "Print Design", "Branding",
+                "Traditional Marketing", "Social Media Marketing", "Portfolio Creation",
+                "Landing Page", "Packaging Design", "Social Media Management", "Website",
+                "Logo Designing", "Photoshoots", "Campaigns", "Back"
+            ]);
+        }
+        else if (choice === "Booking") {
+            showMessage("bot", "To book my superhero skills, I’ll fly you to the booking page now! 🦸‍♂️", true);
+            setTimeout(()=>{ window.location.href = "book.html"; }, 1500);
+        }
+        else if (choice === "Contact Us") {
+            showMessage("bot", "📧 Mail us at team@alphamarkex.com or 📞 call on 6306837440 — We’ll reach you in 24 hours!", true);
+        }
+        else if (choice === "About Us") {
+            showMessage("bot", "We are AlphaMarkex — blending creativity & heroism to make your brand soar above the rest!", true);
+        }
+        else if (choice === "Pricing") {
+        showMessage("bot", "Even superheroes have fair rates! Let’s discuss and make your budget fly high. Fill the form below to get a quote.", true);
+        
+        // Add Yes/No buttons
+        setTimeout(() => {
+            const chatBox = document.getElementById("chat-box");
+            const buttonWrapper = document.createElement("div");
+            buttonWrapper.style.marginTop = "10px";
+    
+            // Yes button
+            const yesBtn = document.createElement("button");
+            yesBtn.innerText = "Yes";
+            yesBtn.style.marginRight = "10px";
+            yesBtn.classList.add("quick-btn");
+            yesBtn.onclick = () => {
+                window.location.href = "book.html";
+            };
+    
+            // No button
+            const noBtn = document.createElement("button");
+            noBtn.innerText = "No";
+            noBtn.classList.add("quick-btn");
+            noBtn.onclick = () => {
+                showMessage("bot", "Alright! How may I help you today?", true);
+                showQuickReplies(); // re-show your quick reply buttons
+            };
+    
+            buttonWrapper.appendChild(yesBtn);
+            buttonWrapper.appendChild(noBtn);
+            chatBox.appendChild(buttonWrapper);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 500);
+    }
+    
+        else if (choice === "Portfolio") {
+            showMessage("bot", "Feast your eyes on my past heroic deeds! 📂 [Link to portfolio here]", true);
+        }
+        else if (choice === "Back") {
+            setQuickReplies(["Services", "Booking", "Contact Us", "About Us", "Pricing", "Portfolio"]);
+        }
+        else {
+            // Individual services replies
+            const replies = {
+                "Video Editing": "I splice, dice, and add cinematic flair so your videos have more punch than a supervillain’s plot!",
+                "Thumbnail Design": "Thumbnails so good, people will click faster than a speeding bullet!",
+                "SMO": "Social Media Optimization — making your brand more visible than a hero’s cape in the wind.",
+                "Print Design": "From flyers to posters, I make print materials that leap off the page!",
+                "Branding": "I craft your identity so strong, even kryptonite can’t weaken it.",
+                "Traditional Marketing": "Old-school tactics with a heroic twist — billboards, flyers, and more!",
+                "Social Media Marketing": "I’ll boost your social presence faster than I chase villains.",
+                "Portfolio Creation": "I’ll present your best work so well it could win awards.",
+                "Landing Page": "Pages so persuasive, visitors can’t resist taking action!",
+                "Packaging Design": "Make your product look like it belongs in a hero’s utility belt.",
+                "Social Media Management": "I’ll handle your posts while you handle your success.",
+                "Website": "I’ll build a fortress of code that looks amazing and performs even better.",
+                "Logo Designing": "Your brand’s emblem — designed to inspire like the Bat-Signal.",
+                "Photoshoots": "Capture moments so epic, they belong in a comic book.",
+                "Campaigns": "Strategic missions to win hearts, minds, and market share."
+            };
+            if (replies[choice]) {
+                showMessage("bot", replies[choice], true);
+            }
+        }
+    }
+    </script>
+</body>
+</html>

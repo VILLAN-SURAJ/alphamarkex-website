@@ -1,21 +1,17 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "*.{png,jpg,jpeg,svg,gif,webp,avif,mp4,mp3,pdf}", "use": "@vercel/static" }
-  ],
   "rewrites": [
     { "source": "/", "destination": "/main.html" }
   ],
   "headers": [
     {
-      "source": "/(.*)\\.(?:js|css)",
+      "source": "/(.*)\\.(js|css)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*)\\.(?:png|jpg|jpeg|gif|svg|webp|avif|mp4|mp3|pdf)",
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|webp|avif|mp4|mp3|pdf)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]

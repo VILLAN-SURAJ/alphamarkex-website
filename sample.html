@@ -791,77 +791,6 @@ nav.nav-links a:hover::after {
   }
 
   .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.95);
-    border: none;
-    font-size: 22px;
-    padding: 6px 10px;
-    cursor: pointer;
-    z-index: 2;
-    border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-
-  .nav-btn.left {
-    left: 8px;
-  }
-
-  .nav-btn.right {
-    right: 8px;
-  }
-
-  .poster-grid {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .slider-wrapper {
-    display: none;
-  }
-
-  .poster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px 0;
-  }
-
-  .poster img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-}
-@media (max-width: 768px) {
-  .slider-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  .mobile-slider {
-    display: flex;
-    transition: transform 0.4s ease;
-  }
-
-  .mobile-slide {
-    min-width: 100%;
-    flex-shrink: 0;
-  }
-
-  .mobile-slide img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .nav-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1572,18 +1501,18 @@ button.send-btn {
 <h2>Photoshoot</h2>
 
 <section class="poster-grid">
-  <div class="poster"><img src="/shoot1-v1.png?v=5" alt="Shoot 1" loading="eager" decoding="async" onerror="this.onerror=null;this.src='/shoot1.png?v=5';"></div>
-  <div class="poster"><img src="/shoot2-v1.png?v=5" alt="Shoot 2" loading="eager" decoding="async" onerror="this.onerror=null;this.src='/shoot2.png?v=5';"></div>
-  <div class="poster"><img src="/shoot3-v1.png?v=5" alt="Shoot 3" loading="eager" decoding="async" onerror="this.onerror=null;this.src='/shoot3.png?v=5';"></div>
+  <div class="poster"><img src="./shoot1-v1.png?v=6" alt="Shoot 1" loading="eager" decoding="async" onerror="this.onerror=null;this.src='./shoot1.png?v=6';"></div>
+  <div class="poster"><img src="./shoot2-v1.png?v=6" alt="Shoot 2" loading="eager" decoding="async" onerror="this.onerror=null;this.src='./shoot2.png?v=6';"></div>
+  <div class="poster"><img src="./shoot3-v1.png?v=6" alt="Shoot 3" loading="eager" decoding="async" onerror="this.onerror=null;this.src='./shoot3.png?v=6';"></div>
 </section>
 
 <div class="slider-wrapper">
     <button class="nav-btn left"></button>
   
     <div class="mobile-slider">
-      <div class="mobile-slide"><img src="/shoot1-v1.png?v=5" alt="Shoot 1" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/shoot1.png?v=5';"></div>
-      <div class="mobile-slide"><img src="/shoot2-v1.png?v=5" alt="Shoot 2" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/shoot2.png?v=5';"></div>
-      <div class="mobile-slide"><img src="/shoot3-v1.png?v=5" alt="Shoot 3" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/shoot3.png?v=5';"></div>
+      <div class="mobile-slide"><img src="./shoot1-v1.png?v=6" alt="Shoot 1" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='./shoot1.png?v=6';"></div>
+      <div class="mobile-slide"><img src="./shoot2-v1.png?v=6" alt="Shoot 2" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='./shoot2.png?v=6';"></div>
+      <div class="mobile-slide"><img src="./shoot3-v1.png?v=6" alt="Shoot 3" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='./shoot3.png?v=6';"></div>
     </div>
   
     <button class="nav-btn right"></button>
